@@ -138,7 +138,7 @@ class PaperweightCore : Plugin<Project> {
             val cache = target.layout.cache
 
             val serverProj = target.ext.serverProject.orNull ?: return@afterEvaluate
-            serverProj.apply(plugin = "com.github.johnrengelman.shadow")
+            serverProj.apply(plugin = "io.github.goooler.shadow")
             val shadowJar = serverProj.tasks.named("shadowJar", Jar::class)
 
             tasks.generateReobfMappings {

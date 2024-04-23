@@ -103,7 +103,7 @@ fun Project.setupServerProject(
 
     addMcDevSourcesRoot(mcDevSourceDir)
 
-    plugins.apply("com.github.johnrengelman.shadow")
+    plugins.apply("io.github.goooler.shadow")
     return createBuildTasks(parent, packagesToFix, reobfMappings)
 }
 

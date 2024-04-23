@@ -155,7 +155,7 @@ class PaperweightPatcher : Plugin<Project> {
             }
 
             val serverProj = patcher.serverProject.orNull ?: return@afterEvaluate
-            serverProj.apply(plugin = "com.github.johnrengelman.shadow")
+            serverProj.apply(plugin = "io.github.goooler.shadow")
             val shadowJar = serverProj.tasks.named("shadowJar", Jar::class)
 
             generateReobfMappings {
